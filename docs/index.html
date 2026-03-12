@@ -5,7 +5,7 @@
 <title>Cinéma Pontonx</title>
 
 <link rel="manifest" href="manifest.json">
-<meta name="theme-color" content="#000000">
+<meta name="theme-color" content="#cc0000">
 
 <script>
 let deferredPrompt;
@@ -22,37 +22,24 @@ function installApp(){
 </script>
 
 <style>
-body{
-font-family:Arial;
-text-align:center;
-padding-top:50px;
-}
-button{
-font-size:30px;
-padding:20px;
-background:#cc0000;
-color:white;
-border:none;
-border-radius:10px;
+body { font-family: Arial; text-align:center; padding-top:50px; }
+button {
+  font-size:30px;
+  padding:20px;
+  background:#cc0000;
+  color:white;
+  border:none;
+  border-radius:10px;
+  display:none;
 }
 </style>
-
 </head>
 
 <body>
-
 <h1>Cinéma Pontonx</h1>
 
-<button id="install" onclick="installApp()" style="display:none">
-Installer l'application
-</button>
-
+<button id="install" onclick="installApp()">Installer l'application</button>
 <br><br>
-
-<a href="https://www.cinemapontonx.fr">
-Accéder au site
-</a>
-
+<a href="https://www.cinemapontonx.fr">Accéder au site</a>
 </body>
-
 </html>
