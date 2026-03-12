@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Cinéma Pontonx</title>
+
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#000000">
+
+<script>
+let deferredPrompt;
+
+window.addEventListener('beforeinstallprompt', (e) => {
+  e.preventDefault();
+  deferredPrompt = e;
+  document.getElementById("install").style.display = "block";
+});
+
+function installApp(){
+  deferredPrompt.prompt();
+}
+</script>
+
+<style>
+body{
+font-family:Arial;
+text-align:center;
+padding-top:50px;
+}
+button{
+font-size:30px;
+padding:20px;
+background:#cc0000;
+color:white;
+border:none;
+border-radius:10px;
+}
+</style>
+
+</head>
+
+<body>
+
+<h1>Cinéma Pontonx</h1>
+
+<button id="install" onclick="installApp()" style="display:none">
+Installer l'application
+</button>
+
+<br><br>
+
+<a href="https://www.cinemapontonx.fr">
+Accéder au site
+</a>
+
+</body>
+</html>
