@@ -3,30 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Cinéma Pontonx</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="manifest" href="manifest.json">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#cc0000">
-
-<script>
-let deferredPrompt;
-
-window.addEventListener('beforeinstallprompt', (e) => {
-  e.preventDefault();
-  deferredPrompt = e;
-  document.getElementById("install").style.display = "block";
-});
-
-function installApp(){
-  deferredPrompt.prompt();
-}
-</script>
-
 <style>
-body {
-  font-family: Arial, sans-serif;
-  text-align:center;
-  padding-top:50px;
-}
+body { font-family: Arial, sans-serif; text-align:center; padding-top:50px; }
 button {
   font-size:30px;
   padding:20px;
@@ -38,15 +19,21 @@ button {
 }
 </style>
 </head>
-
 <body>
 <h1>Cinéma Pontonx</h1>
-
 <p>Pour installer l’application, cliquez sur le bouton ci-dessous :</p>
+<button id="install">Installer l'application</button>
 
-<button id="install" onclick="installApp()">Installer l'application</button>
-
-<!-- Lien pour accéder directement au site en cas de problème -->
-<p><a href="https://www.cinemapontonx.fr">Accéder au site</a></p>
+<script>
+let deferredPrompt;
+window.addEventListener('beforeinstallprompt', (e) => {
+  e.preventDefault();
+  deferredPrompt = e;
+  document.getElementById('install').style.display = 'block';
+});
+document.getElementById('install').addEventListener('click', () => {
+  deferredPrompt.prompt();
+});
+</script>
 </body>
 </html>
