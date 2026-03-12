@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
 <meta charset="utf-8">
 <title>Cinéma Pontonx</title>
-
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="manifest" href="manifest.json">
 <meta name="theme-color" content="#cc0000">
 
@@ -22,7 +22,11 @@ function installApp(){
 </script>
 
 <style>
-body { font-family: Arial; text-align:center; padding-top:50px; }
+body {
+  font-family: Arial, sans-serif;
+  text-align:center;
+  padding-top:50px;
+}
 button {
   font-size:30px;
   padding:20px;
@@ -38,8 +42,11 @@ button {
 <body>
 <h1>Cinéma Pontonx</h1>
 
+<p>Pour installer l’application, cliquez sur le bouton ci-dessous :</p>
+
 <button id="install" onclick="installApp()">Installer l'application</button>
-<br><br>
-<a href="https://www.cinemapontonx.fr">Accéder au site</a>
+
+<!-- Lien pour accéder directement au site en cas de problème -->
+<p><a href="https://www.cinemapontonx.fr">Accéder au site</a></p>
 </body>
 </html>
