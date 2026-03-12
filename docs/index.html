@@ -6,34 +6,12 @@
 <link rel="manifest" href="manifest.json">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#cc0000">
-<style>
-body { font-family: Arial, sans-serif; text-align:center; padding-top:50px; }
-button {
-  font-size:30px;
-  padding:20px;
-  background:#cc0000;
-  color:white;
-  border:none;
-  border-radius:10px;
-  display:none;
-}
-</style>
+<script>
+// redirection immédiate vers ton site Netlify
+window.location.href = "https://www.cinemapontonx.fr";
+</script>
 </head>
 <body>
-<h1>Cinéma Pontonx</h1>
-<p>Pour installer l’application, cliquez sur le bouton ci-dessous :</p>
-<button id="install">Installer l'application</button>
-
-<script>
-let deferredPrompt;
-window.addEventListener('beforeinstallprompt', (e) => {
-  e.preventDefault();
-  deferredPrompt = e;
-  document.getElementById('install').style.display = 'block';
-});
-document.getElementById('install').addEventListener('click', () => {
-  deferredPrompt.prompt();
-});
-</script>
+<p>Redirection vers le site Cinéma Pontonx…</p>
 </body>
 </html>
